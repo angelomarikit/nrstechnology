@@ -11,17 +11,22 @@ export function Logo({ className, compact = false }: LogoProps) {
   return (
     <Link
       to="/"
-      className={cn('inline-flex items-center gap-3 rounded-md focus-visible:outline-none', className)}
+      className={cn(
+        'inline-flex shrink-0 items-center overflow-visible focus-visible:outline-none',
+        className,
+      )}
       aria-label={`${company.brandName} home`}
     >
       <img
         src={company.logo.src}
         alt={company.logo.alt}
-        width={compact ? 140 : company.logo.width}
-        height={compact ? 56 : company.logo.height}
+        width={company.logo.width}
+        height={company.logo.height}
         className={cn(
-          'h-auto object-contain',
-          compact ? 'w-[7.5rem] sm:w-[8.5rem]' : 'w-[9rem] sm:w-[10.5rem]',
+          'block h-auto w-auto max-w-full bg-transparent object-contain object-left',
+          compact
+            ? 'w-[14rem] sm:w-[16.5rem] lg:w-[18rem]'
+            : 'w-[15rem] sm:w-[17rem]',
         )}
         decoding="async"
       />

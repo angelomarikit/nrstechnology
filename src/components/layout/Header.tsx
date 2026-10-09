@@ -69,20 +69,24 @@ export function Header() {
       </a>
       <header
         className={cn(
-          'sticky top-0 z-50 border-b transition-[background-color,box-shadow,border-color,backdrop-filter] duration-300',
+          'sticky top-0 z-50 overflow-visible border-b transition-[border-color,box-shadow] duration-300 relative',
           transparent
-            ? 'border-transparent bg-transparent'
-            : 'border-border/70 bg-white/92 shadow-[0_8px_30px_-20px_rgba(8,41,104,0.28)] backdrop-blur-xl',
+            ? 'border-transparent'
+            : 'border-border/70 shadow-[0_8px_30px_-20px_rgba(8,41,104,0.28)]',
         )}
       >
-        <div className="container-nrs grid h-16 grid-cols-[auto_1fr_auto] items-center gap-3 lg:h-[4.5rem]">
-          <Logo
-            compact
-            className={cn(
-              'justify-self-start transition',
-              transparent && 'rounded-xl bg-white px-2.5 py-1.5 shadow-sm ring-1 ring-black/5',
-            )}
-          />
+        {/* Blur on a separate layer — backdrop-filter on <header> clips the logo */}
+        <div
+          aria-hidden
+          className={cn(
+            'pointer-events-none absolute inset-0 -z-10 transition-[background-color,backdrop-filter] duration-300',
+            transparent
+              ? 'bg-transparent'
+              : 'bg-white/92 backdrop-blur-xl supports-[backdrop-filter]:bg-white/80',
+          )}
+        />
+        <div className="container-nrs relative grid grid-cols-[auto_1fr_auto] items-center gap-4 py-3 sm:py-3.5 lg:py-4">
+          <Logo compact className="justify-self-start" />
 
           <nav
             aria-label="Primary"

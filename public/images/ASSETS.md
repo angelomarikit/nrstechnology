@@ -18,6 +18,6 @@ All photography used on this site is sourced from [Unsplash](https://unsplash.co
 | `services/business-automation.jpg` | Analytics / process work | Unsplash |
 | `services/digital-transformation.jpg` | Team working with technology | Unsplash |
 
-Logo: `/public/logo/nrs-logo.png` — official glossy NRS Technologies brand asset. JPG backup retained as `nrs-logo.jpg`. Do not redraw or alter geometry.
+Logo: `/public/logo/nrs-logo.jpg` — official glossy blue NRS Technologies brand asset (black background). Do not redraw or alter geometry.
 
 To replace an image, keep the same filename and approximate aspect ratio to avoid layout shifts.

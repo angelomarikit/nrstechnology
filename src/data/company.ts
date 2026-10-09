@@ -17,10 +17,11 @@ export const company = {
   mapsDirectionsUrl:
     'https://www.google.com/maps/dir/?api=1&destination=Unit%201015%2C%2010F%2C%20Parkway%20Corporate%20Center%2C%20Corporate%20Ave.%20Parkway%20Place%2C%20Filinvest%20City%2C%20Alabang%2C%20Muntinlupa%20City%2C%20Philippines',
   logo: {
-    src: '/logo/nrs-logo.png',
+    src: '/logo/nrs-logo.png?v=10',
+    srcDark: '/logo/nrs-logo.png?v=10',
     alt: 'NRS Technologies — Powering Your Next Move',
-    width: 180,
-    height: 72,
+    width: 1064,
+    height: 379,
   },
   mission:
     'We help organizations convert technology investment into business performance. We measure our success by whether our clients are stronger after we leave than they were before we arrived.',

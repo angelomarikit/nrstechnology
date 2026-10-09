@@ -11,8 +11,9 @@ export function Footer() {
     <footer className="bg-gradient-to-b from-navy-midnight to-navy-deep text-white">
       <div className="container-nrs py-14 lg:py-16">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-          <div>
-            <div className="inline-block rounded-xl bg-white/95 p-2">
+          <div className="flex flex-col items-start">
+            {/* White plate so the full original logo stays readable on navy */}
+            <div className="inline-flex rounded-xl bg-white p-2.5 shadow-sm">
               <Logo />
             </div>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/75">
